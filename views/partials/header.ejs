@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>PseudoBlog</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="/"><img src="/images/close.svg" alt="close"></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/new_post">Create Post</a></li>
+            </ul>
+            <ul class="topbar">
+                <li><a href="/" id="logo"><img src="/images/Logo.png" alt="logo" class="logo"><span class="pseudo">Pseudo</span>Blog</a></li>
+                <li class="hideLink"><a href="/">Home</a></li>
+                <li class="hideLink"><a href="/new_post">Create Post</a></li>
+                <li class="hideMenu" onclick=showSidebar()><a href="#"><img src="/images/menu.svg" alt="menu" class="menu"></a></li>
+            </ul>
+            
+        </nav> 
+        <!-- <img src="/images/home_bg.jpg" class="img-fluid masthead" alt="home"> -->
+    </header>
+        <main>
+            

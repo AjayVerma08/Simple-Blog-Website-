@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+        <% if (post_data.length > 0) { %>
+            <% post_data.forEach(post => { %>
+            <div class="card mb-3 ms-3" style="max-width: 98%;">
+            <div class="row g-0">
+                <!-- <div class="col-md-4">   
+                    <img src=<%= post.image %> 
+                        alt="Scientific Argument"
+                        class="img-fluid rounded-start"
+                        style="height: 250px; width: 100%; object-fit: cover;"
+                        aria-label="Your image description"
+                        loading="lazy">
+                    </div> -->
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <% if (post.id > 2) { %>
+                                <a href="/post/<%= post.id %>" class="articles">
+                            <% } else {%>
+                                <a href=<%= post.link %> class="articles">
+                            <% } %>
+                            <h5 class="card-title"><%= post.title %></h5>
+                            <p class="card-text"><%= post.body.substring(0, 400) %>...</p></a>
+                            <footer class="card-text"><small class="text-body-secondary"><%= post.author %></small></footer>
+                        </div>
+                </div>
+            </div>
+            </div>
+            <% }) %>
+        <% } %>
+<%- include("partials/footer.ejs") %>

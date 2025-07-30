@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+    <div class="card mb-3 ms-3" style="max-width: 98%;">
+        <div class="col-md-12">
+            <div class="card-body">     
+                <h5 class="card-title"><%= post.title %></h5>
+                    <p class="card-text"><%= post.body%></p></a>
+                <footer class="card-text"><small class="text-body-secondary">by <span><%= post.author %></span></small></footer>
+            </div>  
+        </div>   
+    </div>
+    <a href="/edit/<%= post.id %>" class="btn btn-success ms-3">Edit </a>
+    <form action="/delete/<%= post.id %>" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure?');">
+    <button type="submit" class="btn btn-danger ms-3">Delete</button>
+    </form>
+
+<%- include("partials/footer.ejs") %>
